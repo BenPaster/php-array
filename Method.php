@@ -102,7 +102,6 @@ class Method {
      */
 
     public static function undot($array) {
-
       $fmt = function($key, $value, $start = 0) use (&$fmt) {
         $keys = explode('.', $key);
         if(count($keys) > $start) return [ $keys[$start] => $fmt($key, $value, ++$start) ];
@@ -111,10 +110,8 @@ class Method {
 
       $results = [];
       foreach($array as $key => $value) $results = array_merge_recursive($results, $fmt($key, $value));
-
       return $results;
-      
-  	}
+    }
 
     /**
      * Get all of the given array except for a specified array of items.
