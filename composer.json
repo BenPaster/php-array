@@ -2,6 +2,10 @@
   "name": "benpaster/php-array",
   "description": "PHP array manipulation",
   "version": "0.1",
+  "homepage": "http://besimpler.com",
+  "require": {
+      "php": ">=5.3"
+  },
   "autoload": {
     "classmap": [
       "."
